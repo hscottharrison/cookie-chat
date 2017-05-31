@@ -4,14 +4,22 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body ng-controller="mainCtrl">
+    <header class="head"></header>
+    <img class="logo" src="https://d11a31vse2ifj1.cloudfront.net/case-studies/logos/_280x280_crop_center-center/devmtn-logo@2x.jpg" />
     <div class="main-container">
-      <h1> DevMountain Chat Room </h1>
+      <h1 class="content"> DevMountain Chat Room </h1>
+      <h3 class="content">A simple parse powered no-so-private chat</h3>
       <form ng-submit="postMessage(message)">
-        <input class="form-control text-box" type="text" ng-model="message" placeholder="Message">
+        <input class="form-control text-box" type="text" ng-model="message" placeholder="Compose Message">
       </form>
       <div class="messages-container">
+        <div>
+          Messages from DevMountaineers
+        </div>
+
         <p ng-repeat="message in messages ">
           {{message.message}} </p>
       </div>
