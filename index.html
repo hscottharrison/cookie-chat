@@ -8,7 +8,10 @@
   </head>
   <body ng-controller="mainCtrl">
     <header class="head"></header>
-    <img class="logo" src="https://d11a31vse2ifj1.cloudfront.net/case-studies/logos/_280x280_crop_center-center/devmtn-logo@2x.jpg" />
+    <div class="logo-div">
+      <img class="logo" src="https://d11a31vse2ifj1.cloudfront.net/case-studies/logos/_280x280_crop_center-center/devmtn-logo@2x.jpg" />
+    </div>
+
     <div class="main-container">
       <h1 class="content"> DevMountain Chat Room </h1>
       <h3 class="content">A simple parse powered no-so-private chat</h3>
@@ -21,7 +24,7 @@
         </div>
 
         <p ng-repeat="message in messages ">
-          {{message.message}} </p>
+          {{message.message}} <span>{{message.createdAt}}</span> </p>
       </div>
     </div>
 
