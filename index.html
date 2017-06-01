@@ -24,7 +24,7 @@
         </div>
 
         <p ng-repeat="message in messages ">
-          {{message.message}} <span>{{message.createdAt}}</span> </p>
+          {{message.message}} <span class="time-stamp">{{message.createdAt | date: 'short'}}</span> </p>
       </div>
     </div>
 
